@@ -1,0 +1,147 @@
+/* ------------------------------------------------ */
+/*                   FONTS                          */
+/* ------------------------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300..900&display=swap");
+
+/* Tailwind */
+@import "tailwindcss";
+
+/* ------------------------------------------------ */
+/*                   THEME                          */
+/* ------------------------------------------------ */
+@theme {
+  --font-hero: "JetBrains Mono", monospace;
+  --font-heading: "JetBrains Mono", monospace;
+  --font-body: "Inter Tight", sans-serif;
+}
+
+/* ------------------------------------------------ */
+/*                GLOBAL RESET                      */
+/* ------------------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  /* GLOBAL BACKGROUND (same glow everywhere) */
+  background: radial-gradient(
+      circle at top,
+      rgba(16, 185, 129, 0.12) 0%,
+      transparent 55%
+    ),
+    #1a1a1a;
+  background-attachment: fixed;
+
+  font-family: var(--font-body);
+  color: #e2e8f0; /* slate-300 default */
+  overflow-x: hidden;
+}
+
+/* Remove selection color */
+::selection {
+  background: rgba(16, 185, 129, 0.4);
+  color: white;
+}
+
+/* ------------------------------------------------ */
+/*                 TYPOGRAPHY UTILITIES             */
+/* ------------------------------------------------ */
+
+.font-hero {
+  font-family: var(--font-hero);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.font-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* ------------------------------------------------ */
+/*                UI UTILITIES                      */
+/* ------------------------------------------------ */
+
+/* Blocky minimal subtitle underline */
+.section-underline {
+  height: 2px;
+  width: 160px;
+  background: rgba(16, 185, 129, 0.35);
+  margin-top: 8px;
+}
+
+/* Clean subtle separator line */
+.divider-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #334155, transparent);
+}
+
+/* Cards (if needed later) */
+.card-flat {
+  border: 1px solid rgba(100, 116, 139, 0.25);
+  background: rgba(15, 23, 42, 0.35);
+  border-radius: 6px;
+}
+
+/* Hover lift */
+.hover-lift {
+  transition: all 0.2s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+}
+
+/* Clean link hover */
+a {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+a:hover {
+  opacity: 0.85;
+}
+
+
+
+/* ------------------------------------------------ */
+/*             SCROLLBAR (OPTIONAL)                */
+/* ------------------------------------------------ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.6);
+}
+
+/* ------------------------------------------------ */
+/*             SPACING FIXES FOR SECTIONS          */
+/* ------------------------------------------------ */
+
+section {
+  scroll-margin-top: 100px;
+}
+
+/* ------------------------------------------------ */
+/*           OPTIONAL UTILITIES (ADVANCED)         */
+/* ------------------------------------------------ */
+
+.text-glow-green {
+  text-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
+}
+
+.bg-fade {
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4));
+}
