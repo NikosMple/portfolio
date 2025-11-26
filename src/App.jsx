@@ -1,5 +1,4 @@
 import Navbar from "./ui/Navbar";
-import ScrollProgress from "./ui/ScrollProgress";
 import Home from "./components/Home";
 import About from "./components/About";
 import Experience from "./components/Experience";
@@ -11,7 +10,6 @@ import SocialBar from "./ui/SocialBar";
 export default function App() {
   return (
     <div className="screen-full">
-      <ScrollProgress />
       <Navbar />
       <SocialBar />
       <Home />

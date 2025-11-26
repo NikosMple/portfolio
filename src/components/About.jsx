@@ -8,11 +8,11 @@ import {
   SiNestjs,
   SiPrisma,
   SiPostgresql,
-  SiDocker,
   SiSolidity,
   SiGit,
   SiTailwindcss,
-  SiFigma,
+  SiExpress,
+  SiFirebase,
 } from "react-icons/si";
 
 function About() {
@@ -20,26 +20,29 @@ function About() {
     { icon: SiReact, label: "React" },
     { icon: SiTypescript, label: "TypeScript" },
     { icon: SiJavascript, label: "JavaScript" },
+    { icon: SiTailwindcss, label: "TailwindCSS" },
     { icon: SiNodedotjs, label: "Node.js" },
     { icon: SiNestjs, label: "NestJS" },
+    { icon: SiExpress, label: "Express" },
+    { icon: SiGit, label: "Git" },
     { icon: SiPrisma, label: "Prisma" },
     { icon: SiPostgresql, label: "PostgreSQL" },
-    { icon: SiDocker, label: "Docker" },
+    { icon: SiFirebase, label: "Firebase" },
     { icon: SiSolidity, label: "Solidity" },
-    { icon: SiGit, label: "Git" },
-    { icon: SiTailwindcss, label: "TailwindCSS" },
-    { icon: SiFigma, label: "Figma" },
   ];
 
   return (
-    <section id="about" className="px-6 py-24 max-w-7xl mx-auto">
+    <section
+      id="about"
+      className="min-h-screen flex flex-col justify-center px-6 py-24 max-w-6xl mx-auto"
+    >
       {/* Section Title */}
       <motion.div
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="mb-16"
+        className="mb-20"
       >
         <SectionHeader number="01" title="About Me" />
       </motion.div>
@@ -55,28 +58,29 @@ function About() {
           className="text-slate-300 space-y-7 leading-relaxed font-body"
         >
           <p>
-            I&apos;m a{" "}
+            My name is Nikos Bletsas, a developer based in Athens, Greece. I
+            hold a bachelor’s degree in Computer Engineering and work primarily
+            with <strong>React</strong>, <strong>TypeScript</strong>, and{" "}
+            <strong>Node.js</strong>. I focus on performance, clarity, and
+            engineering that stays clean as the project grows.
+          </p>
+
+          <p>
+            I currently work as a{" "}
             <span className="text-emerald-400 font-semibold">
-              full-stack developer
-            </span>{" "}
-            who loves building clean, fast and thoughtful digital experiences.
-            My main stack revolves around <strong>React, TypeScript</strong> and{" "}
-            <strong>modern Node.js architecture</strong>, with a strong focus on
-            engineering quality.
+              Frontend Engineer
+            </span>
+            , focusing on crafting reliable interfaces, scalable features, and
+            maintainable codebases. I enjoy working across the stack, from UI
+            decisions to API design, backend structure, and database workflows.
           </p>
 
           <p>
-            I enjoy working across the whole spectrum — from UI decisions and
-            product experience, to API architecture, backend structure and
-            database design. My goal is to write code that feels{" "}
-            <span className="text-emerald-400">maintainable, scalable</span> and
-            genuinely pleasant to read.
-          </p>
-
-          <p>
-            I&apos;m also exploring the Web3 ecosystem, studying{" "}
-            <strong>Solidity</strong>, smart contracts and blockchain
-            fundamentals through the University of Nicosia.
+            I’m also exploring the{" "}
+            <span className="text-emerald-400">Web3</span> ecosystem, studying{" "}
+            <strong>Solidity</strong>, smart-contract development, and
+            blockchain fundamentals through the University of Nicosia’s
+            blockchain program.
           </p>
         </motion.div>
 
@@ -94,8 +98,8 @@ function About() {
           "
         >
           <h3 className="font-hero text-xl text-white mb-8 tracking-wide relative inline-block">
-            Technologies I Use
-            <span className="absolute -bottom-1 left-0 w-12 h-0.5 bg-emerald-400/70"></span>
+            Some of the tech I work with
+            <span className="absolute -bottom-1 left-0 w-30 h-0.5 bg-emerald-400/70"></span>
           </h3>
 
           <div className="grid grid-cols-3 sm:grid-cols-4 gap-5 text-center">
@@ -139,10 +143,10 @@ function About() {
           "
         >
           <h4 className="font-hero text-xl text-white mb-1 tracking-wide">
-            B.Sc. Computer Engineering
+            Bachelor’s Degree in Computer Engineering
           </h4>
           <p className="text-slate-300/90 text-sm mb-2">
-            University of Thessaly · 2018–2023
+            University of Thessaly · 2016 – 2024
           </p>
           <p className="text-slate-400/80 text-sm leading-relaxed">
             Focused on software engineering, algorithms, distributed systems and
@@ -167,7 +171,7 @@ function About() {
             Web3 MOOC — Blockchain, Cryptography & Decentralization
           </h4>
           <p className="text-slate-300/90 text-sm mb-2">
-            University of Nicosia · 2024
+            University of Nicosia
           </p>
           <p className="text-slate-400/80 text-sm leading-relaxed">
             Studying smart contracts, Solidity fundamentals, and the

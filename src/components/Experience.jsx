@@ -8,30 +8,37 @@ function Experience() {
     {
       title: "Frontend Developer",
       company: "TMA — Telematic Medical Applications",
-      duration: "2024 — Present",
+      duration: "May 2025 — Present",
       location: "Athens, Greece",
       icon: HiOutlineBriefcase,
       description: [
-        "Building medical interfaces with React + TypeScript.",
-        "Developing real-time patient dashboards using SignalR.",
-        "Integrating medical device streams into telemedicine UIs.",
-        "Coordinating with .NET teams for API & data sync.",
+        "Building responsive medical monitoring dashboards with React & TypeScript.",
+        "Delivering real-time patient data visualizations through SignalR.",
+        "Collaborating with .NET teams to integrate APIs and streaming endpoints.",
+        "Designing scalable UI modules with reusable components and clean architecture.",
       ],
-      technologies: ["React", "TypeScript", "SignalR", ".NET", "Tailwind"],
+      technologies: [
+        "React",
+        "TypeScript",
+        "SignalR",
+        ".NET",
+        "Tailwind",
+        "Swagger",
+      ],
       active: true,
     },
     {
-      title: "IT Intern",
-      company: "National Bank of Greece",
-      duration: "2022",
-      location: "Athens, Greece",
+      title: "IT Internship",
+      company: "Thessaly Cooperative Bank",
+      duration: "2023 — 2024",
+      location: "Trikala, Greece",
       icon: AiOutlineBank,
       description: [
-        "Maintained internal banking tools and workflows.",
-        "Supported enterprise applications and system updates.",
-        "Collaborated with SysOps and IT teams on daily tasks.",
+        "Performed on-site hardware installation, repair, and system diagnostics at bank branches.",
+        "Resolved network issues to ensure stable banking system operation.",
+        "Managed sensitive financial data while following strict security and compliance standards.",
       ],
-      technologies: ["SysOps", "Support", "Internal Tools"],
+      technologies: ["IT Support", "Hardware Maintenance", "Networking"],
       active: false,
     },
   ];
@@ -39,14 +46,8 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="relative px-6 py-24 max-w-6xl mx-auto overflow-hidden"
+      className="min-h-screen flex flex-col justify-center relative px-6 py-24 max-w-6xl mx-auto overflow-hidden"
     >
-      {/* Background Glow */}
-      <div className="absolute inset-0 pointer-events-none -z-10">
-        <div className="absolute top-1/3 -left-40 w-96 h-96 bg-emerald-500/10 blur-[140px] rounded-full"></div>
-        <div className="absolute bottom-1/3 -right-40 w-96 h-96 bg-blue-500/10 blur-[160px] rounded-full"></div>
-      </div>
-
       {/* Title */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
